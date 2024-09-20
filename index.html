@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ABC Bank</h1>
+        <div id="message" class="message"></div>
+        <form id="bank-form">
+            <label for="name">Customer Name:</label>
+            <input type="text" id="name" required><br>
+
+            <label for="accountType">Account Type:</label>
+            <select id="accountType">
+                <option value="Saving">Saving</option>
+                <option value="Current">Current</option>
+            </select><br>
+
+            <label for="accountNumber">Account Number:</label>
+            <input type="text" id="accountNumber" required><br>
+
+            <label for="balance">Opening Balance (Minimum 500):</label>
+            <input type="number" id="balance" min="500" required><br>
+
+            <button type="button" onclick="createAccount()">Create Account</button>
+        </form>
+
+        <h2>Actions</h2>
+        <div>
+            <label for="accountAction">Enter Account Number for Action:</label>
+            <input type="text" id="actionAccountNumber"><br>
+            <button type="button" onclick="checkBalance()">Check Balance</button>
+            <button type="button" onclick="creditAccount()">Credit</button>
+            <button type="button" onclick="debitAccount()">Debit</button>
+            
+             <button type="button" onclick="deleteAccount()">Delete Account</button>
+        </div>
+
+        <div id="customerDetails"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
